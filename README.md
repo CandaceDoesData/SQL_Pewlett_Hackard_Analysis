@@ -57,10 +57,10 @@ The following business questions were answered using SQL:
 
 ## 📌 Business Value
 
-  - This project demonstrates how raw, disconnected datasets can be transformed into a structured relational database capable of supporting business intelligence and workforce analysis.
+This project demonstrates how raw, disconnected datasets can be transformed into a structured relational database capable of supporting business intelligence and workforce analysis.
 
 The workflow mirrors real-world data engineering tasks:
 
-rebuilding legacy systems
-enabling HR reporting
-supporting workforce planning and organizational analysis
+  - rebuilding legacy systems
+  - enabling HR reporting
+  - supporting workforce planning and organizational analysis
