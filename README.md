@@ -1,26 +1,66 @@
-# SQL_Challenge
-It’s been two weeks since you were hired as a new data engineer at Pewlett Hackard (a fictional company). Your first major task is to do a research project about people whom the company employed during the 1980s and 1990s. All that remains of the employee database from that period are six CSV files.
+#📊 Pewlett Hackard Employee Database Reconstruction & Analysis (SQL)
+##🧭 Business Problem
 
-For this project, you’ll design the tables to hold the data from the CSV files, import the CSV files into a SQL database, and then answer questions about the data. That is, you’ll perform data modeling, data engineering, and data analysis, respectively.
+  Pewlett Hackard’s legacy employee database from the 1980s–1990s was no longer stored in a structured system. Instead, historical HR data existed as six disconnected CSV files containing employee, department, title, salary, and assignment information.
 
-## Data Modeling
-Inspect the CSV files, and then sketch an Entity Relationship Diagram of the tables. To create the sketch, feel free to use a tool like QuickDBDLinks to an external site..
+  The goal of this project was to reconstruct a relational database from raw files and use SQL to analyze workforce structure, hiring trends, and department composition.
 
-## Data Engineering
-Use the provided information to create a table schema for each of the six CSV files. Be sure to do the following:
+  This project simulates a real-world HR analytics scenario where organizations must rebuild or modernize legacy data systems to enable reporting and decision-making.
 
-  - Remember to specify the data types, primary keys, foreign keys, and other constraints.
-  - For the primary keys, verify that the column is unique. Otherwise, create a composite key, which takes two           primary keys to uniquely identify a row.
-  - Be sure to create the tables in the correct order to handle the foreign keys.
+##🧱 Data Approach
 
-Import each CSV file into its corresponding SQL table.
+This project followed a full end-to-end SQL workflow:
 
-## Data Analysis
-  - List the employee number, last name, first name, sex, and salary of each employee.
-  - List the first name, last name, and hire date for the employees who were hired in 1986.
-  - List the manager of each department along with their department number, department name, employee number, last       name, and first name.
-  - List the department number for each employee along with that employee’s employee number, last name, first name,      and department name.
-  - List first name, last name, and sex of each employee whose first name is Hercules and whose last name begins         with the letter B.
-  - List each employee in the Sales department, including their employee number, last name, and first name.
-  - List each employee in the Sales and Development departments, including their employee number, last name, first       name, and department name.
-  - List the frequency counts, in descending order, of all the employee last names (that is, how many employees          share each last name).
+  1. Data Modeling
+    - Inspected raw CSV files
+    - Designed an Entity Relationship Diagram (ERD)
+    - Defined relationships between employees, departments, salaries, titles, and department assignments
+    - Identified primary and composite keys to ensure data integrity
+  2. Data Engineering
+    - Built a relational database using PostgreSQL
+    - Created normalized table schemas for six datasets
+    - Defined primary keys, foreign keys, and constraints
+    - Ensured correct table creation order for referential integrity
+    - Imported CSV data into structured SQL tables
+  3. Data Analysis
+    - Wrote SQL queries using joins, aggregations, filtering, and grouping
+    - Transformed raw employee data into structured workforce insights
+
+##📊 Key Analysis Performed
+
+The following business questions were answered using SQL:
+
+  - Employee salary distribution across the organization
+  - Employees hired during specific time periods (e.g., 1986 cohort)
+  - Department manager assignments by department
+  - Employee-to-department relationships across the company
+  - Employees working in Sales and Development departments
+  - Frequency distribution of employee last names
+
+##💡 Key Insights (Example – Customize if you want stronger impact)
+
+  - The dataset shows a highly structured departmental workforce with clear separation of roles and reporting lines.
+  - Multiple departments share overlapping talent pools, indicating cross-functional staffing patterns.
+  - Certain last names appear at unusually high frequency, suggesting possible data duplication patterns or generational hiring clusters.
+  - Historical hiring patterns (1980s–1990s) can be used to simulate retirement wave analysis and succession planning.
+
+##🛠️ Tools & Skills
+
+  - SQL (PostgreSQL)
+  - Data modeling (ERD design)
+  - Database schema design
+  - Relational database normalization
+  - Joins (INNER, LEFT)
+  - Aggregations (GROUP BY, COUNT)
+  - Data cleaning and validation
+  - Analytical thinking and business interpretation
+
+##📌 Business Value
+
+  - This project demonstrates how raw, disconnected datasets can be transformed into a structured relational database capable of supporting business intelligence and workforce analysis.
+
+The workflow mirrors real-world data engineering tasks:
+
+rebuilding legacy systems
+enabling HR reporting
+supporting workforce planning and organizational analysis
